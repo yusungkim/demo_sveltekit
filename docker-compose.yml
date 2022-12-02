@@ -1,0 +1,20 @@
+services:
+  app:
+    platform: linux/amd64 # for M1 chip
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: demo_sveltekit
+    # command: 'yarn dev' # for dev
+    # command: 'yarn preview' # for production preview
+    tty: true
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - 5000:5000 # dev
+      - 5001:5001 # preview
+    networks:
+      - demo_sveltekit
+
+networks:
+  demo_sveltekit:
