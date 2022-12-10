@@ -1,4 +1,8 @@
-export const load = async () => {
+import type { PageLoad } from './$types';
+
+export const load: PageLoad = async ({ fetch }) => {
+  console.log("PageLoad: /shop/+page.ts")
+  
   const fetchProducts = async () => {
     const productRes = await fetch(
       "https://dummyjson.com/products/search?q=phone&limit=10"
@@ -12,8 +16,6 @@ export const load = async () => {
     const userData = await userRes.json();
     userData.users;
   };
-
-  console.log("+page.ts, fetch data from api");
 
   // pass data with contents of Promise
   return {

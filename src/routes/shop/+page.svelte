@@ -1,7 +1,7 @@
 <script lang="ts">
   // receive data from +page.ts
   export let data;
-  console.log("+page.svelte data loaded.")
+  console.log("Data Received and Rendered Page: /shop/+page.svelte")
 
   const { products, users } = data;
 </script>

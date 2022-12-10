@@ -9,6 +9,7 @@
       <div class="px-5 flex flex-col">
         <span>fetch simultaneously (pass Promise)</span>
         <span>preload (data-sveltekit-preload-data="hover")</span>
+        <span>server side load & env ($env/static/private)</span>
       </div>
     </li>
   </ul>
