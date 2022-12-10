@@ -1,3 +1,10 @@
 {
-	"/": []
+	"/": [],
+	"/shop": [
+		"src/routes/shop/+page.ts"
+	],
+	"/study": [],
+	"/movies": [
+		"src/routes/movies/+page.server.ts"
+	]
 }

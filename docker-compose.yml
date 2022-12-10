@@ -10,9 +10,10 @@ services:
     tty: true
     volumes:
       - .:/usr/src/app
+      - ./node_modules:/usr/src/app/node_modules
     ports:
-      - 5000:5000 # dev
-      - 5001:5001 # preview
+      - 3000:3000 # dev
+      - 3001:3001 # preview
     networks:
       - demo_sveltekit
 

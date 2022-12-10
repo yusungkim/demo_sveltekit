@@ -4,13 +4,16 @@ import { sveltekit } from '@sveltejs/kit/vite';
 const config = {
 	plugins: [sveltekit()],
 	server: {
-    port: 5000,
+    port: 3000,
     strictPort: false
   },
   preview: {
-    port: 5001,
+    port: 3001,
     strictPort: false
-  }
+  },
+  ssr: {
+    noExternal: ["svelte-hero-icons"],
+  },
 };
 
 export default config;
