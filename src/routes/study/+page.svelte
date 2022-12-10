@@ -32,7 +32,7 @@
         </a>
       </div>
       <div class="px-5 flex flex-col">
-        <span>fetch simultaneously (pass Promise)</span>
+        <span>dynamic route</span>
         
       </div>
     </li>

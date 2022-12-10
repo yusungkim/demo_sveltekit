@@ -6,7 +6,7 @@
   const { products, users } = data;
 </script>
 
-<h1 class="text-3xl">Shop</h1>
+<h1 class="text-3xl p-5">Shop</h1>
 
 <div class="flex flex-col gap-3">
 {#each products as product}
