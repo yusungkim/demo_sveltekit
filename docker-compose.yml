@@ -4,18 +4,26 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    image: demo_sveltekit
+    image: demo
     # command: 'yarn dev' # for dev
     # command: 'yarn preview' # for production preview
     tty: true
     volumes:
       - .:/usr/src/app
-      - ./node_modules:/usr/src/app/node_modules
+      - node_modules:/usr/src/app/node_modules
     ports:
       - 3000:3000 # dev
       - 3001:3001 # preview
     networks:
-      - demo_sveltekit
+      - demo
 
 networks:
-  demo_sveltekit:
+  demo:
+
+volumes:
+  node_modules:
+    # driver: local
+    # driver_opts:
+    #   type: none
+    #   device: ${PWD}/node_modules
+    #   o: bind
